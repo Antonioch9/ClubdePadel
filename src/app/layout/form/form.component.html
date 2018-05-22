@@ -1,0 +1,113 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Editar Jugador</li>
+    </ol>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 ">
+
+            <form>
+                <div class="row">
+
+
+                    <div class="col">
+                        <h4>Datos del Jugador</h4>
+
+                        <div class="col-md-8 ">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre" name="nombre" ngModel>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" ngModel>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="dni">DNI</label>
+                                <input type="text" class="form-control" placeholder="dni" name="dni" ngModel>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="pasaporte">Pasaporte</label>
+                                <input type="text" class="form-control" placeholder="pasaporte" name="pasaporte" ngModel>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="nacionalidad">Nacionalidad</label>
+                                <select class="form-control" name="nacionalidad" ngModel>
+                                    <option *ngFor="let nacionalidad of nacionalidades" value="nacionalidad">
+                                        {{nacionalidad}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="col-md-8" style="border: solid 1px grey; width: 300px;
+                                height: 200px;">
+                            <img src="../../../assets/images/foto-carnet.jpg" style="width: 250px; height: 180px" alt="">
+                        </div>
+                        <br>
+                        <input type="file">
+                        <br>
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="col-md-4">
+                                <label for="nivel">Nivel de Juego</label>
+                                <select class="form-control" name="nivel" ngModel>
+                                    <option *ngFor="let nivel of niveles" value="nivel">
+                                        {{nivel}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="id">Id</label>
+                                <input type="text" class="form-control" placeholder="id" name="id" ngModel>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="numeroTarjeta">Nº de tarjeta</label>
+                                <input type="number" class="form-control" placeholder="numeroTarjeta" name="numeroTarjeta" ngModel>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="numeroUsuario">Nº de Usuario</label>
+                                <input type="number" class="form-control" placeholder="numeroUsuario" name="numeroUsuario" ngModel>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div style=" width: 100%">
+                    <div style="padding-left: 80%">
+                        <button type="submit" class="btn btn-primary" style="margin: 5px;">Añadir Datos</button>
+                        <button class="btn btn-danger" routerLink="/">Volver</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
