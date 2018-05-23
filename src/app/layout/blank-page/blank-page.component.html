@@ -1,0 +1,49 @@
+<form>
+    <div class="row">
+
+
+        <div class="col">
+            <h4>Datos de la reserva</h4>
+
+            <div class="col-md-4 ">
+                <div class="form-group line">
+                    <input type="text" class="form-control" placeholder="Alberto Perez"  readonly> &nbsp;&nbsp;
+                    <img src="../../../assets/images/foto-carnet (1).jpg" style="width: 30px;height: 30px" alt="">
+                </div>
+                
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group line">
+                    <input type="text" class="form-control" placeholder="Susana Lopez"  readonly>&nbsp;&nbsp;
+                    <img src="../../../assets/images/foto-carnet.jpg" style="width: 30px;height: 30px" alt="">
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-group line">
+                    <input type="text" class="form-control" placeholder="Jose Manuel Sevilla"  readonly>&nbsp;&nbsp;
+                    <img src="../../../assets/images/rodriguez_juan_ramon_foto-carnet.jpg" style="width: 30px;height: 30px" alt="">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group line">
+                    <input type="text" class="form-control" placeholder="Miriam Delgado"  readonly>&nbsp;&nbsp;
+                    <img src="../../../assets/images/rodriguez_juan_ramon_foto-carnet.jpg" style="width: 30px;height: 30px" alt="">
+                </div>
+            </div>
+
+        </div>
+<form >
+    <div class="container" ng-app="app" ng-cloak ng-controller="AppCtrl as ctrl">
+        <div class="input-group clockpicker" 
+             clock-picker 
+             data-autoclose="true">
+          <input ng-model="ctrl.time" type="text" class="form-control">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-time"></span>
+          </span>
+        </div>
+        {{ctrl.time|lowercase}}
+        <input ng-model="ctrl.time" type="text" class="form-control">
+      </div>

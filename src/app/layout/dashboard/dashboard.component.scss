@@ -3,7 +3,8 @@
     border: 1px solid greenyellow
 }
 .botones{
-    text-align: center
+    text-align: center;
+    margin-top: 10px;
 }
 .letra{
     font-family: 'Anton', sans-serif;
@@ -13,7 +14,46 @@
 .tarjeta{
     border-radius: 50px;
     margin-bottom: 10px;
+  
+    
 }
 .barra{
+    position: fixed;
+    width: 20%;
+    left: 80%;
+    height: 90vh;
+    background-color:#222;
+    color: white;
+}
+.fechas{
     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+.centrado{
+   
+
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
+.largo{
+    width: 85%
+}
+label{
+    color:black;
+}
+input{
+    border: solid 2px greenyellow;
+    border-radius: 10px;
+}
+.jugador:hover{
+    z-index: 100;
+    background-color: black;
 }

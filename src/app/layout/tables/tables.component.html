@@ -25,40 +25,81 @@
     </thead>
     <tbody>
         <tr>
-            <th scope="row"><img src="../../../assets/images/rodriguez_juan_ramon_foto-carnet.jpg" style="width: 30px;height:30px ;" alt=""></th>
+            <th scope="row">
+                <img src="../../../assets/images/rodriguez_juan_ramon_foto-carnet.jpg" style="width: 30px;height:30px ;" alt="">
+            </th>
             <td>Juan</td>
             <td>Perez</td>
             <td>Principiante</td>
             <td>si</td>
             <td>
-                <button class="btn btn-primary">
+                <button routerLink="/forms" [routerLinkActive]="['router-link-active']" class="btn btn-primary">
                     <i class="fas fa-pencil-alt"></i>
                 </button>
+                &nbsp;
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="fas fa-trash-alt"></i>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Eliminar Jugador</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                               ¿Está seguro que desea eliminar el jugador?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </td>
+
 
         </tr>
         <tr>
-            <th scope="row"><img src="../../../assets/images/descarga.jpg" style="width: 30px;height:30px ;"></th>
+            <th scope="row">
+                <img src="../../../assets/images/descarga.jpg" style="width: 30px;height:30px ;">
+            </th>
             <td>Alberto</td>
             <td>López</td>
             <td>Medio</td>
             <td>si</td>
             <td>
-                <button class="btn btn-primary">
+                <button routerLink="/forms" [routerLinkActive]="['router-link-active']" class="btn btn-primary">
                     <i class="fas fa-pencil-alt"></i>
+                </button>
+                &nbsp;
+                <button routerLink="/forms" [routerLinkActive]="['router-link-active']" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i>
                 </button>
             </td>
 
         </tr>
         <tr>
-            <th scope="row"><img src="../../../assets/images/images.jpg" style="width: 30px;height:30px ;"></th>
+            <th scope="row">
+                <img src="../../../assets/images/images.jpg" style="width: 30px;height:30px ;">
+            </th>
             <td>Juan</td>
             <td>Perez</td>
             <td>Principiante</td>
             <td>si</td>
             <td>
-                <button class="btn btn-primary">
+                <button routerLink="/forms" [routerLinkActive]="['router-link-active']" class="btn btn-primary">
                     <i class="fas fa-pencil-alt"></i>
+                </button>
+                &nbsp;
+                <button routerLink="/forms" [routerLinkActive]="['router-link-active']" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i>
                 </button>
             </td>
         </tr>
