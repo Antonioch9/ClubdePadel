@@ -59,12 +59,16 @@
 
                     </div>
                     <div class="col">
-                        <div class="col-md-8" style="border: solid 1px grey; width: 300px;
+                        <!-- <div class="col-md-8" style="border: solid 1px grey; width: 300px;
                                 height: 200px;">
-                            <img src="../../../assets/images/foto-carnet.jpg" style="width: 250px; height: 180px" alt="">
-                        </div>
+                            <img src="../../../assets/images/logowebpeq2.png" style="width: 250px; height: 180px" alt="">
+                        </div> -->
                         <br>
-                        <input type="file">
+                        <form >
+                            <input type="file" (change)="preview($event)" accept="image/" >
+                            <br>
+                            <canvas #myCanvas style="width:300px; height: 300px;border: 1px solid red"></canvas>
+                        </form>
                         <br>
                         <div class="row" style="margin-top: 30px;">
                             <div class="col-md-4">
@@ -95,11 +99,65 @@
 
 
                 </div>
-
-
+                <hr>
+                <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                MATRICULAS
+                              </button>
+                            </h5>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                    <form action="/action_page.php" method="get">
+                                        <p><strong>Servicios Disponibles </strong> </p>
+                                        <input type="checkbox" name="vehicle" value="Bike"> Socio Gimnasio
+                                        <br>
+                                        <input type="checkbox" name="vehicle" value="Car"> Socio Padel
+                                        <br>
+                                        <input type="checkbox" name="vehicle" value="Car"> Socio Padel y Gimnasio
+                                        <br>
+                                        <button class="btn btn-success verde" type="submit" value="Añadir servicios">
+                                                 Añadir servicio
+                                        </button>
+                                       
+                                    </form>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                                <div class="card-header" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                     ACCESO A VESTUARIOS
+                                    </button>
+                                  </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                  <div class="card-body">
+                                        <form action="/action_page.php" method="get">
+                                            <p> <strong>Servicios Disponibles </strong> </p>
+                                            <input type="checkbox" name="vehicle" value="Car"> Bonos Gimnasio
+                                            <br>
+                                            <input type="checkbox" name="vehicle" value="Car"> Bono masaje 1 hora
+                                            <br>
+                                            <input type="checkbox" name="vehicle" value="Car"> Bono Padel
+                                            <br>
+                                            <button class="btn btn-success verde" type="submit" value="Añadir servicios">
+                                                    Añadir servicio
+                                           </button>
+                                        </form>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>
+                      
 
                 <div style=" width: 100%">
-                    <div style="padding-left: 80%">
+                    <div style="padding-left: 80%;display: inline;">
                         <button type="submit" class="btn btn-primary" style="margin: 5px;">Añadir Datos</button>
                         <button class="btn btn-danger" routerLink="/">Volver</button>
                     </div>

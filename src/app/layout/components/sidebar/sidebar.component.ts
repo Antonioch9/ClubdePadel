@@ -40,6 +40,14 @@ export class SidebarComponent {
             this.showMenu = element;
         }
     }
+    addExpandClasss(element: any) {
+        if (element === this.showMenu) {
+            this.showMenu = '1';
+        } else {
+            this.showMenu = element;
+        }
+    }
+    
 
     isToggled(): boolean {
         const dom: Element = document.querySelector('body');

@@ -31,8 +31,8 @@ export class ChartsComponent implements OnInit {
     public barChartLegend: boolean = true;
 
     public barChartData: any[] = [
-        { data: [65, 59, 80, 81, 56, 55, 40,50,56,65,56,69], label: 'Pistas Alquiladas diarias' },
-        { data: [28, 48, 40, 19, 86, 27, 90,50,30,25,98,20], label: 'Pistas alquiladas mensualmente' }
+        { data: [65, 59, 80, 81, 56, 55, 40,50,56,65,56,69], label: 'Pistas' },
+        { data: [28, 48, 40, 19, 86, 27, 90,50,30,25,98,20], label: 'Gimnasio' }
     ];
 
     // Doughnut

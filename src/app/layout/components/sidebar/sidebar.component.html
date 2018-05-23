@@ -1,7 +1,7 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <div class="list-group">
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Pistas' | translate }}
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Inicio' | translate }}
         </a>
         <div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('pages')">
@@ -26,6 +26,25 @@
                 </ul>
             </li>
         </div>
+        <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('1')">
+                    <span><i class="fa fa-plus"></i>&nbsp; {{ 'Pistas' | translate }}</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === '1'" >
+                    <ul class="submenu">
+                        <li>
+                            <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                <img class="icono" src="../../../../assets/images/icons8-tennis-racquet-30.png" alt="">&nbsp;{{ 'Alquilar Pistas' | translate }}
+                            </a>
+                        </li>
+                        <li>
+                                <a [routerLink]="['/bs-element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                                    <i class="fas fa-table"></i>&nbsp;{{ 'Horarios disponibles' | translate }}
+                                </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
         <!-- <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Charts' | translate }}
         </a>
